@@ -15,9 +15,9 @@ const Nav = () => {
   return (
     <>
       <AppBar position='static' sx={{ bgcolor: 'black' }}>
-        <Toolbar>
+        <Toolbar >
           <IconButton size='small' >
-            <img className={styles.nav_logo}
+            <img className={styles.navLogo}
               src={SiteLogo}
               alt="equitas_logo"
               aria-label="logo"
@@ -27,7 +27,7 @@ const Nav = () => {
             {menuItems.map((item) => (
               <Button
                 key={item}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', fontWeight: 'bold'}}
               >
                 {item}
               </Button>

@@ -3,6 +3,7 @@ import {useState, useEffect} from "react";
 import Launches from "./components/Launches";
 import {Button, Container} from "@mui/material";
 import Nav from "./components/Nav";
+import VideoHero from './components/VideoHero';
 
 const App = () => {
 
@@ -129,8 +130,9 @@ const App = () => {
     return (
         <div>
             <Nav />
+            <VideoHero />
 
-            <Container>
+            <Container maxWidth="xl ">
                 <p>Total Launches: {data["totalDocs"]}</p>
                 {data["docs"] ? (
                     <div>

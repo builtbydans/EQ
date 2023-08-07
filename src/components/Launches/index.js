@@ -1,15 +1,15 @@
-import {Grid, Paper} from "@mui/material";
+import {Grid, Card } from "@mui/material";
 import Launch from "../Launch";
 import styles from './launches.module.css';
 
 const Launches = ({launches}) =>  {
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={5}>
             {launches.map((launch) => (
-                <Grid key={launch.id} item xs={4}>
-                    <Paper className={styles.page}>
+                <Grid key={launch.id} item xs={6}>
+                    <Card className={styles.launchCard}>
                         <Launch props={launch}/>
-                    </Paper>
+                    </Card>
                 </Grid>
             ))}
         </Grid>

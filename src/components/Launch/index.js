@@ -6,6 +6,7 @@ const Launch = ({props}) => {
     return (
         <div>
             <div className={styles.launchTitle}>{props.name}</div>
+            <img src={props.img} alt="" />
             <div>Id: {props.id}</div>
             <div>Flight Number: {props.flight_number}</div>
             <div>Launch Date: {moment(props.date_utc).format('MMMM Do YYYY, h:mm:ss a')}</div>
