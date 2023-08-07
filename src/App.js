@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 import Launches from "./components/Launches";
 import {Button, Container} from "@mui/material";
 
-function App() {
+const App = () => {
 
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1)
