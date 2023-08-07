@@ -2,6 +2,7 @@ import './App.css';
 import {useState, useEffect} from "react";
 import Launches from "./components/Launches";
 import {Button, Container} from "@mui/material";
+import Nav from "./components/Nav";
 
 const App = () => {
 
@@ -112,7 +113,8 @@ const App = () => {
     };
 
     useEffect(() => {
-        fetchData(currentPage);
+      fetchData(currentPage);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const nextPage = () => {
@@ -126,6 +128,7 @@ const App = () => {
 
     return (
         <div>
+            <Nav />
 
             <Container>
                 <p>Total Launches: {data["totalDocs"]}</p>
