@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Equitas_FE-Test/static/css/main.f7233bff.css",
+    "main.js": "/Equitas_FE-Test/static/js/main.ece8481c.js",
+    "static/media/spacexpromo.mp4": "/Equitas_FE-Test/static/media/spacexpromo.e0b230ba3366ad38c112.mp4",
+    "static/media/EquitasX_logo.png": "/Equitas_FE-Test/static/media/EquitasX_logo.490da5bc65aae231dc7b.png",
+    "index.html": "/Equitas_FE-Test/index.html",
+    "main.f7233bff.css.map": "/Equitas_FE-Test/static/css/main.f7233bff.css.map",
+    "main.ece8481c.js.map": "/Equitas_FE-Test/static/js/main.ece8481c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7233bff.css",
+    "static/js/main.ece8481c.js"
+  ]
+}
