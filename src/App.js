@@ -1,9 +1,11 @@
 import './App.css';
 import {useState, useEffect} from "react";
-import Launches from "./components/Launches";
+import LaunchCard from "./components/LaunchCard";
 import {Button, Container} from "@mui/material";
 import Nav from "./components/Nav";
-import VideoHero from './components/VideoHero';
+import VideoBG from './components/VideoBG';
+import Hero from './components/Hero';
+import moment from 'moment';
 
 const App = () => {
 
@@ -12,7 +14,7 @@ const App = () => {
     const apiUrl = 'https://api.spacexdata.com/v4/launches/query';
 
     function getQueryBody(pageNumber) {
-        return  {
+        return {
             query: {
                 upcoming: false,
                 success: true
@@ -128,28 +130,40 @@ const App = () => {
     }
 
     return (
-        <div>
+        <main>
             <Nav />
-            <VideoHero />
+            <VideoBG />
+            <Hero />
 
-            <Container maxWidth="xl ">
-                <p>Total Launches: {data["totalDocs"]}</p>
-                {data["docs"] ? (
-                    <div>
-                        <Launches launches={data["docs"]}/>
-                        <p>Page {data["page"]} / {data["totalPages"]} </p>
-                        <Button variant="outlined" onClick={prevPage} disabled={currentPage === 1}>Prev Page</Button>
-                        <Button variant="outlined" onClick={nextPage} disabled={currentPage === data["totalPages"]}>Next
-                           Page</Button>
+            <Container maxWidth="lg">
 
-                   </div>
-                ) : (
-                    <div>Loading...</div>
-                )}
+              <h4>Total Launches To Date:
+                <span>{data["totalDocs"]}</span>
+              </h4>
 
+              {data["docs"] ? (
+                  <div>
+                    <LaunchCard launches={data["docs"]}/>
+                    <div className="pagination">
+                      <Button sx={{borderColor: "white", color: "white", marginRight: "10px"}}
+                        variant="outlined"
+                        onClick={prevPage}
+                        disabled={currentPage === 1}>
+                          Prev Page
+                      </Button>
+                      <Button sx={{borderColor: "white", color: "white"}}
+                        variant="outlined"
+                        onClick={nextPage}
+                        disabled={currentPage === data["totalPages"]}>
+                          Next Page
+                      </Button>
+                    </div>
+                  </div>
+              ) : (
+                  <div>Loading...</div>
+              )}
             </Container>
-
-        </div>
+        </main>
     );
 }
 export default App;

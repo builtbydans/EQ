@@ -13,7 +13,7 @@ const Nav = () => {
                      "Hire Danish"]
 
   return (
-    <>
+    <header>
       <AppBar position='static' sx={{ bgcolor: 'black' }}>
         <Toolbar >
           <IconButton size='small' >
@@ -35,7 +35,7 @@ const Nav = () => {
           </Box>
         </Toolbar>
       </AppBar>
-    </>
+    </header>
   )
 }
 
