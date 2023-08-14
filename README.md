@@ -2,7 +2,7 @@
 
 Equitas X is a React application designed to pull and display API data from Space X Launch.
 
-Live Link: https://builtbydans.github.io/Equitas_FE-Test/
+Live Link: https://builtbydans.github.io/EQ
 
 ## Installation
 
